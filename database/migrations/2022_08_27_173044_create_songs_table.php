@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('lyrics');
             $table->text('path');
             $table->integer('mtime');
+            $table->foreignId('album_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('artist_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });

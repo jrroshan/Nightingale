@@ -1,11 +1,15 @@
 <?php
 
-namespace App\Models\Albums;
+namespace App\Models\Setting;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Albums extends Model
+class Setting extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+      'media_path'
+    ];
 }
